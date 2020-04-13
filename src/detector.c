@@ -1620,9 +1620,10 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
             printf( " %s\n", token ); //printing each token
             token = strtok(NULL, "/");
             if (token != NULL){
-              strcpy(file_name, token)
-            };
-        };
+              strcpy(file_name, token);
+            }
+        }
+        printf( "final file name %s\n", file_name );
         char buff[256];
         sprintf(buff, "results/%s", file_name);
         save_image(im, buff);
