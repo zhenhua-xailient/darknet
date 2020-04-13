@@ -1623,7 +1623,6 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
               strcpy(file_name, token);
             }
         }
-        printf( "final file name %s\n", file_name );
         char buff[256];
         sprintf(buff, "results/%s", file_name);
         save_image(im, buff);
