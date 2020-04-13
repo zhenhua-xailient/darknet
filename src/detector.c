@@ -1621,8 +1621,8 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
             token = strtok(NULL, "/");
             if (token != NULL){
               strcpy(file_name, token)
-            }
-        }
+            };
+        };
         char buff[256];
         sprintf(buff, "results/%s", file_name);
         save_image(im, buff);
