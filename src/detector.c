@@ -1610,7 +1610,23 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
             else diounms_sort(dets, nboxes, l.classes, nms, l.nms_kind, l.beta_nms);
         }
         draw_detections_v3(im, dets, nboxes, thresh, names, alphabet, l.classes, ext_output);
-        save_image(im, "predictions");
+
+        char cpy_str[sizeof(input)];
+        strcpy(cpy_str, input);
+        char * token = strtok(cpy_str, "/");
+        char file_name[256];
+         // loop through the string to extract all other tokens
+        while( token != NULL ) {
+            printf( " %s\n", token ); //printing each token
+            token = strtok(NULL, "/");
+            if (token != NULL){
+              strcpy(file_name, token)
+            }
+        }
+        char buff[256];
+        sprintf(buff, "results/%s", file_name);
+        save_image(im, buff);
+        // save_image(im, "predictions");
         if (!dont_show) {
             show_image(im, "predictions");
         }
