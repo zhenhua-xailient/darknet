@@ -1303,7 +1303,7 @@ float validate_detector_map(char *datacfg, char *cfgfile, char *weightfile, floa
     free(fp_for_thresh_per_class);
 
     fprintf(stderr, "Total Detection Time: %d Seconds\n", (int)(time(0) - start));
-    printf("images = %d, total_time = %d, inference_time = %d, fps = %\n", num_images, (int)(time(0) - start), ((float)(time(0) - start))/((float)num_images);
+    printf("images = %d, total_time = %d, inference_time = %d, fps = %\n", num_images, (int)(time(0) - start), ((float)(time(0) - start))/((float)num_images));
     printf("\nSet -points flag:\n");
     printf(" `-points 101` for MS COCO \n");
     printf(" `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) \n");
