@@ -1303,7 +1303,7 @@ float validate_detector_map(char *datacfg, char *cfgfile, char *weightfile, floa
     free(fp_for_thresh_per_class);
 
     fprintf(stderr, "Total Detection Time: %d Seconds\n", (int)(time(0) - start));
-    float inference_time = ((float)(time(0) - start)) / ((float)num_images));
+    float inference_time = ((float)(time(0) - start)) / ((float)num_images);
     float fps = ((float)num_images)) / ((float)(time(0) - start));
     printf("images = %d, total_time = %d, inference_time = %f, fps = %f \n", num_images, (int)(time(0) - start), inference_time, fps;
     printf("\nSet -points flag:\n");
